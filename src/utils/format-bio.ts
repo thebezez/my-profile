@@ -1,5 +1,4 @@
-
 export function formatBio(bio: string, maxLength: number = 100): string {
-  return bio.substring(0, maxLength)
+  if (bio.length <= maxLength) return bio
+  return bio.substring(0, maxLength).trimEnd() + '...'
 }
-
